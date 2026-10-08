@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — NEXUS LOUNGE</title>
+  <meta name="description" content="Learn about NEXUS LOUNGE mission, community philosophy, low-latency voice architecture, and moderation safety standards.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CDN & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Core Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+    <header class="nexus-navbar">
+    <div class="nexus-container navbar-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <i class="bi bi-controller"></i>
+        </div>
+        <span>NEXUS LOUNGE</span>
+      </a>
+
+      <ul class="nav-menu-desktop">
+        <li><a href="index.html" class="nav-link-item">Home</a></li>
+
+        <li class="nav-item-dropdown">
+          <a href="community.html" class="nav-link-item">
+            Explore Hubs <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="nexus-dropdown-menu">
+            <a href="community.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-people-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Community Hubs</div>
+                <div class="dropdown-item-sub">Connect with squads & forums</div>
+              </div>
+            </a>
+            <a href="voice-lounge.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-mic-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Voice Lounge</div>
+                <div class="dropdown-item-sub">Live low-latency channels</div>
+              </div>
+            </a>
+            <a href="creators.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-camera-reels-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Creators & Media</div>
+                <div class="dropdown-item-sub">Streamers, clips & photography</div>
+              </div>
+            </a>
+            <a href="events.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Events & Esports</div>
+                <div class="dropdown-item-sub">Live tournaments & showcases</div>
+              </div>
+            </a>
+            <a href="gear-studio.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-cpu-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Gear & Studio</div>
+                <div class="dropdown-item-sub">Battlestation setups & hardware</div>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li><a href="gallery.html" class="nav-link-item">Gallery</a></li>
+
+        <li class="nav-item-dropdown">
+          <a href="about.html" class="nav-link-item active">
+            About & Support <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="nexus-dropdown-menu">
+            <a href="about.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-info-circle-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">About NEXUS</div>
+                <div class="dropdown-item-sub">Our mission & gaming platform</div>
+              </div>
+            </a>
+            <a href="contact.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-envelope-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Contact Support</div>
+                <div class="dropdown-item-sub">Help desk & member inquiries</div>
+              </div>
+            </a>
+            <a href="dashboard.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-speedometer2"></i></div>
+              <div>
+                <div class="dropdown-item-title">Member Dashboard</div>
+                <div class="dropdown-item-sub">Squad stats & activity hub</div>
+              </div>
+            </a>
+            <a href="admin.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-shield-lock-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Admin Console</div>
+                <div class="dropdown-item-sub">System & moderation panel</div>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-actions-desktop">
+        <a href="dashboard.html" class="btn-nexus-primary btn-sm">
+          <i class="bi bi-speedometer2 me-1"></i> Dashboard
+        </a>
+      </div>
+
+      <button id="mobileToggleBtn" class="mobile-toggle-btn" aria-label="Open navigation menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+
+        <div id="mobileNavOverlay" class="mobile-nav-overlay">
+      <div class="mobile-menu-container">
+        
+        <!-- ITEM 1: HOME -->
+        <a href="index.html" class="mobile-nav-item-link">
+          <i class="bi bi-house-door-fill me-2 text-primary"></i> Home
+        </a>
+
+        <!-- ITEM 2: EXPLORE HUBS (ACCORDION DROPDOWN) -->
+        <div class="mobile-dropdown-group">
+          <button class="mobile-dropdown-toggle" type="button">
+            <span><i class="bi bi-compass-fill me-2 text-purple"></i> Explore Hubs</span>
+            <i class="bi bi-chevron-down toggle-arrow"></i>
+          </button>
+          <div class="mobile-dropdown-content">
+            <a href="community.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-people-fill text-primary"></i></div>
+              <div>
+                <div class="sublink-title">Community Hubs</div>
+                <div class="sublink-desc">Connect with squads & forums</div>
+              </div>
+            </a>
+            <a href="voice-lounge.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-mic-fill text-purple"></i></div>
+              <div>
+                <div class="sublink-title">Voice Lounge</div>
+                <div class="sublink-desc">Live low-latency channels</div>
+              </div>
+            </a>
+            <a href="creators.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-camera-reels-fill text-warning"></i></div>
+              <div>
+                <div class="sublink-title">Creators & Media</div>
+                <div class="sublink-desc">Streamers, clips & photography</div>
+              </div>
+            </a>
+            <a href="events.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-trophy-fill text-success"></i></div>
+              <div>
+                <div class="sublink-title">Events & Esports</div>
+                <div class="sublink-desc">Live tournaments & showcases</div>
+              </div>
+            </a>
+            <a href="gear-studio.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-cpu-fill text-info"></i></div>
+              <div>
+                <div class="sublink-title">Gear & Studio</div>
+                <div class="sublink-desc">Battlestation setups & hardware</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 3: GALLERY -->
+        <a href="gallery.html" class="mobile-nav-item-link">
+          <i class="bi bi-images me-2 text-info"></i> Gallery
+        </a>
+
+        <!-- ITEM 4: ABOUT & SUPPORT (ACCORDION DROPDOWN) -->
+        <div class="mobile-dropdown-group">
+          <button class="mobile-dropdown-toggle" type="button">
+            <span><i class="bi bi-info-circle-fill me-2 text-warning"></i> About & Support</span>
+            <i class="bi bi-chevron-down toggle-arrow"></i>
+          </button>
+          <div class="mobile-dropdown-content">
+            <a href="about.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-info-circle-fill text-primary"></i></div>
+              <div>
+                <div class="sublink-title">About NEXUS</div>
+                <div class="sublink-desc">Our mission & gaming platform</div>
+              </div>
+            </a>
+            <a href="contact.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-envelope-fill text-success"></i></div>
+              <div>
+                <div class="sublink-title">Contact Support</div>
+                <div class="sublink-desc">Help desk & member inquiries</div>
+              </div>
+            </a>
+            <a href="dashboard.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-speedometer2 text-info"></i></div>
+              <div>
+                <div class="sublink-title">Member Dashboard</div>
+                <div class="sublink-desc">Squad stats & activity hub</div>
+              </div>
+            </a>
+            <a href="admin.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-shield-lock-fill text-danger"></i></div>
+              <div>
+                <div class="sublink-title">Admin Console</div>
+                <div class="sublink-desc">System & moderation panel</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-nav-actions">
+        <a href="dashboard.html" class="btn-nexus-primary w-100 text-center py-3 fs-6">
+          <i class="bi bi-speedometer2 me-2"></i> Launch Member Dashboard
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO ABOUT BANNER -->
+    <section class="section-spacing">
+      <div class="nexus-container">
+        <div class="hero-grid">
+          <div class="reveal-up">
+            <div class="section-badge">
+              <i class="bi bi-info-circle-fill"></i>
+              <span>OUR MISSION</span>
+            </div>
+            <h1 class="section-heading mb-3">Built for Gamers, Voice Regulars & Creators</h1>
+            <p class="section-subtext mb-4">
+              NEXUS LOUNGE was created to bridge the gap between competitive gaming squads, voice lounge hangouts, photography sharing, and creator studios. We build high-bitrate voice environments where players talk freely and create more.
+            </p>
+
+            <div class="row g-3 mb-4">
+              <div class="col-6">
+                <div class="p-3 rounded bg-card border border-subtle">
+                  <div class="fs-4 fw-bold font-heading text-primary">384kbps</div>
+                  <div class="small text-muted">Low-Latency Stereo Audio</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 rounded bg-card border border-subtle">
+                  <div class="fs-4 fw-bold font-heading text-purple" style="color: var(--accent-secondary);">100% Free</div>
+                  <div class="small text-muted">Community Voice Lounges</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-image-wrap reveal-up" style="aspect-ratio: 4/3;">
+            <img src="assets/images/33.jpg" alt="NEXUS LOUNGE Community Culture">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE PHILOSOPHY CARDS -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="nexus-container">
+        <div class="section-title-wrap text-center mx-auto" style="max-width: 650px;">
+          <div class="section-badge">
+            <i class="bi bi-heart-fill"></i>
+            <span>OUR VALUES</span>
+          </div>
+          <h2 class="section-heading">The NEXUS Philosophy</h2>
+          <p class="section-subtext">Four core pillars that guide our platform design and moderation culture.</p>
+        </div>
+
+        <div class="nexus-grid-4">
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-body">
+              <div class="dash-stat-icon mb-3"><i class="bi bi-mic-fill"></i></div>
+              <h3 class="h5 mb-2">Voice First</h3>
+              <p class="small text-muted">High bitrate crystal clear audio channels optimized for squad callouts and podcast discussions.</p>
+            </div>
+          </div>
+
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-body">
+              <div class="dash-stat-icon mb-3"><i class="bi bi-shield-lock-fill"></i></div>
+              <h3 class="h5 mb-2">Safe & Inclusive</h3>
+              <p class="small text-muted">Zero tolerance for toxicity. Proactive human and automated community moderation safety.</p>
+            </div>
+          </div>
+
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-body">
+              <div class="dash-stat-icon mb-3"><i class="bi bi-camera-reels-fill"></i></div>
+              <h3 class="h5 mb-2">Creator Driven</h3>
+              <p class="small text-muted">Empowering gaming photographers, streamers, and video producers to build their audience.</p>
+            </div>
+          </div>
+
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-body">
+              <div class="dash-stat-icon mb-3"><i class="bi bi-trophy-fill"></i></div>
+              <h3 class="h5 mb-2">Fair Competition</h3>
+              <p class="small text-muted">Structured esports tournaments, verified caster talent, and transparent match management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="nexus-footer">
+    <div class="nexus-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo mb-3 d-inline-flex">
+            <div class="brand-icon"><i class="bi bi-controller"></i></div>
+            <span>NEXUS LOUNGE</span>
+          </a>
+          <p class="text-muted small mb-4" style="max-width: 320px;">
+            Play Together. Talk Freely. Create More. The premier modern platform for gaming communities, high-bitrate voice lounges, and content creators.
+          </p>
+          <div class="footer-social-links d-flex align-items-center gap-2 mt-3">
+            <a href="https://discord.com" target="_blank" class="footer-social-icon" aria-label="Discord"><i class="bi bi-discord"></i></a>
+            <a href="https://twitch.tv" target="_blank" class="footer-social-icon" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+            <a href="https://youtube.com" target="_blank" class="footer-social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank" class="footer-social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://instagram.com" target="_blank" class="footer-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://reddit.com" target="_blank" class="footer-social-icon" aria-label="Reddit"><i class="bi bi-reddit"></i></a>
+            <a href="https://store.steampowered.com" target="_blank" class="footer-social-icon" aria-label="Steam"><i class="bi bi-steam"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <ul class="footer-links">
+            <li><a href="community.html">Community Hubs</a></li>
+            <li><a href="voice-lounge.html">Voice Lounge</a></li>
+            <li><a href="creators.html">Creators</a></li>
+            <li><a href="gallery.html">Media Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="events.html">Tournaments & Events</a></li>
+            <li><a href="gear-studio.html">Gear & Studio Guide</a></li>
+            <li><a href="about.html">About NEXUS</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Account</h5>
+          <ul class="footer-links">
+            <li><a href="dashboard.html">User Dashboard</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 NEXUS LOUNGE Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</body>
+</html>

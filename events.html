@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Tournaments — NEXUS LOUNGE</title>
+  <meta name="description" content="Register for gaming tournaments, setup photography contests, stream marathons, and esports leagues on NEXUS LOUNGE.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CDN & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Core Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+    <header class="nexus-navbar">
+    <div class="nexus-container navbar-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <i class="bi bi-controller"></i>
+        </div>
+        <span>NEXUS LOUNGE</span>
+      </a>
+
+      <ul class="nav-menu-desktop">
+        <li><a href="index.html" class="nav-link-item">Home</a></li>
+
+        <li class="nav-item-dropdown">
+          <a href="community.html" class="nav-link-item active">
+            Explore Hubs <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="nexus-dropdown-menu">
+            <a href="community.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-people-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Community Hubs</div>
+                <div class="dropdown-item-sub">Connect with squads & forums</div>
+              </div>
+            </a>
+            <a href="voice-lounge.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-mic-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Voice Lounge</div>
+                <div class="dropdown-item-sub">Live low-latency channels</div>
+              </div>
+            </a>
+            <a href="creators.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-camera-reels-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Creators & Media</div>
+                <div class="dropdown-item-sub">Streamers, clips & photography</div>
+              </div>
+            </a>
+            <a href="events.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Events & Esports</div>
+                <div class="dropdown-item-sub">Live tournaments & showcases</div>
+              </div>
+            </a>
+            <a href="gear-studio.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-cpu-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Gear & Studio</div>
+                <div class="dropdown-item-sub">Battlestation setups & hardware</div>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li><a href="gallery.html" class="nav-link-item">Gallery</a></li>
+
+        <li class="nav-item-dropdown">
+          <a href="about.html" class="nav-link-item">
+            About & Support <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="nexus-dropdown-menu">
+            <a href="about.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-info-circle-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">About NEXUS</div>
+                <div class="dropdown-item-sub">Our mission & gaming platform</div>
+              </div>
+            </a>
+            <a href="contact.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-envelope-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Contact Support</div>
+                <div class="dropdown-item-sub">Help desk & member inquiries</div>
+              </div>
+            </a>
+            <a href="dashboard.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-speedometer2"></i></div>
+              <div>
+                <div class="dropdown-item-title">Member Dashboard</div>
+                <div class="dropdown-item-sub">Squad stats & activity hub</div>
+              </div>
+            </a>
+            <a href="admin.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-shield-lock-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Admin Console</div>
+                <div class="dropdown-item-sub">System & moderation panel</div>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-actions-desktop">
+        <a href="dashboard.html" class="btn-nexus-primary btn-sm">
+          <i class="bi bi-speedometer2 me-1"></i> Dashboard
+        </a>
+      </div>
+
+      <button id="mobileToggleBtn" class="mobile-toggle-btn" aria-label="Open navigation menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+
+        <div id="mobileNavOverlay" class="mobile-nav-overlay">
+      <div class="mobile-menu-container">
+        
+        <!-- ITEM 1: HOME -->
+        <a href="index.html" class="mobile-nav-item-link">
+          <i class="bi bi-house-door-fill me-2 text-primary"></i> Home
+        </a>
+
+        <!-- ITEM 2: EXPLORE HUBS (ACCORDION DROPDOWN) -->
+        <div class="mobile-dropdown-group">
+          <button class="mobile-dropdown-toggle" type="button">
+            <span><i class="bi bi-compass-fill me-2 text-purple"></i> Explore Hubs</span>
+            <i class="bi bi-chevron-down toggle-arrow"></i>
+          </button>
+          <div class="mobile-dropdown-content">
+            <a href="community.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-people-fill text-primary"></i></div>
+              <div>
+                <div class="sublink-title">Community Hubs</div>
+                <div class="sublink-desc">Connect with squads & forums</div>
+              </div>
+            </a>
+            <a href="voice-lounge.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-mic-fill text-purple"></i></div>
+              <div>
+                <div class="sublink-title">Voice Lounge</div>
+                <div class="sublink-desc">Live low-latency channels</div>
+              </div>
+            </a>
+            <a href="creators.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-camera-reels-fill text-warning"></i></div>
+              <div>
+                <div class="sublink-title">Creators & Media</div>
+                <div class="sublink-desc">Streamers, clips & photography</div>
+              </div>
+            </a>
+            <a href="events.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-trophy-fill text-success"></i></div>
+              <div>
+                <div class="sublink-title">Events & Esports</div>
+                <div class="sublink-desc">Live tournaments & showcases</div>
+              </div>
+            </a>
+            <a href="gear-studio.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-cpu-fill text-info"></i></div>
+              <div>
+                <div class="sublink-title">Gear & Studio</div>
+                <div class="sublink-desc">Battlestation setups & hardware</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 3: GALLERY -->
+        <a href="gallery.html" class="mobile-nav-item-link">
+          <i class="bi bi-images me-2 text-info"></i> Gallery
+        </a>
+
+        <!-- ITEM 4: ABOUT & SUPPORT (ACCORDION DROPDOWN) -->
+        <div class="mobile-dropdown-group">
+          <button class="mobile-dropdown-toggle" type="button">
+            <span><i class="bi bi-info-circle-fill me-2 text-warning"></i> About & Support</span>
+            <i class="bi bi-chevron-down toggle-arrow"></i>
+          </button>
+          <div class="mobile-dropdown-content">
+            <a href="about.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-info-circle-fill text-primary"></i></div>
+              <div>
+                <div class="sublink-title">About NEXUS</div>
+                <div class="sublink-desc">Our mission & gaming platform</div>
+              </div>
+            </a>
+            <a href="contact.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-envelope-fill text-success"></i></div>
+              <div>
+                <div class="sublink-title">Contact Support</div>
+                <div class="sublink-desc">Help desk & member inquiries</div>
+              </div>
+            </a>
+            <a href="dashboard.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-speedometer2 text-info"></i></div>
+              <div>
+                <div class="sublink-title">Member Dashboard</div>
+                <div class="sublink-desc">Squad stats & activity hub</div>
+              </div>
+            </a>
+            <a href="admin.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-shield-lock-fill text-danger"></i></div>
+              <div>
+                <div class="sublink-title">Admin Console</div>
+                <div class="sublink-desc">System & moderation panel</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-nav-actions">
+        <a href="dashboard.html" class="btn-nexus-primary w-100 text-center py-3 fs-6">
+          <i class="bi bi-speedometer2 me-2"></i> Launch Member Dashboard
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE TITLE HEADER -->
+    <section class="section-spacing pb-4">
+      <div class="nexus-container">
+        <div class="section-title-wrap">
+          <div class="section-badge">
+            <i class="bi bi-trophy-fill"></i>
+            <span>COMPETITIONS & SHOWCASES</span>
+          </div>
+          <h1 class="section-heading">Tournaments & Community Events</h1>
+          <p class="section-subtext">Register your squad for live tournaments, photography battles, and stream marathons.</p>
+        </div>
+
+        <!-- FEATURED EVENT HERO BANNER -->
+        <div class="nexus-card mb-5 overflow-hidden border border-primary reveal-up">
+          <div class="hero-grid p-4 align-items-center">
+            <div class="hero-image-wrap" style="aspect-ratio: 16/9;">
+              <img src="assets/images/23.jpg" alt="Featured Tournament">
+              <span class="status-pill live position-absolute top-0 start-0 m-3"><i class="bi bi-fire"></i> FEATURED EVENT</span>
+            </div>
+            <div>
+              <span class="badge bg-primary mb-2">Flagship Tournament</span>
+              <h2 class="h3 mb-3">Nexus Autumn Squad Showdown</h2>
+              <p class="text-muted mb-4">5v5 Tactical FPS tournament with $5,000 prize pool, broadcast casters, and community drops.</p>
+              <div class="d-flex align-items-center gap-4 mb-4 text-muted small">
+                <span><i class="bi bi-calendar3 me-1"></i> Oct 24, 2026</span>
+                <span><i class="bi bi-clock me-1"></i> 18:00 EST</span>
+                <span><i class="bi bi-people me-1"></i> 64 Squads</span>
+              </div>
+              <button class="btn-nexus-primary js-event-register-btn" data-event-id="ev1">
+                <i class="bi bi-ticket-perforated"></i> Register Squad Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILTER BAR -->
+        <div class="filter-bar">
+          <div class="search-input-wrap">
+            <i class="bi bi-search"></i>
+            <input type="text" id="nexusSearchInput" placeholder="Search events by title or category...">
+          </div>
+          <div class="filter-pills-group">
+            <button class="filter-pill active" data-category="all">All Events</button>
+            <button class="filter-pill" data-category="tournament">Tournaments</button>
+            <button class="filter-pill" data-category="contest">Contests</button>
+            <button class="filter-pill" data-category="marathon">Stream Marathons</button>
+            <button class="filter-pill" data-category="racing">Sim Racing</button>
+          </div>
+        </div>
+
+        <!-- EVENT GRID -->
+        <div class="nexus-grid-3">
+          <!-- Event 2 -->
+          <div class="nexus-card js-filter-card reveal-up" data-category="contest">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 16/9;">
+              <img src="assets/images/24.jpg" alt="Setup Photography Battle">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-purple" style="background-color: var(--accent-secondary);">Contest</span>
+                <span class="small text-muted"><i class="bi bi-clock me-1"></i> Nov 02, 2026</span>
+              </div>
+              <h3 class="h5 mb-2">Setup Photography Battle</h3>
+              <p class="small text-muted mb-3">Submit your gaming setup photo for community voting and RGB hardware drops.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <span class="small text-muted"><i class="bi bi-people me-1"></i> 128 Entered</span>
+                <button class="btn-nexus-primary btn-sm js-event-register-btn" data-event-id="ev2">
+                  <i class="bi bi-ticket-perforated"></i> Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="nexus-card js-filter-card reveal-up" data-category="marathon">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 16/9;">
+              <img src="assets/images/25.jpg" alt="24H Charity Stream">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-success">Stream Marathon</span>
+                <span class="small text-muted"><i class="bi bi-clock me-1"></i> Nov 15, 2026</span>
+              </div>
+              <h3 class="h5 mb-2">24H Creator Charity Stream</h3>
+              <p class="small text-muted mb-3">Joint stream marathon featuring 32 top creators with charity milestone goals.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <span class="small text-muted"><i class="bi bi-people me-1"></i> 32 Creators</span>
+                <button class="btn-nexus-primary btn-sm js-event-register-btn" data-event-id="ev3">
+                  <i class="bi bi-ticket-perforated"></i> Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="nexus-card js-filter-card reveal-up" data-category="racing">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 16/9;">
+              <img src="assets/images/26.jpg" alt="Sim Racing Championship">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark">Sim Racing</span>
+                <span class="small text-muted"><i class="bi bi-clock me-1"></i> Nov 20, 2026</span>
+              </div>
+              <h3 class="h5 mb-2">Sim GT Championship Finals</h3>
+              <p class="small text-muted mb-3">Wheel-to-wheel GT3 endurance championship on virtual Spa-Francorchamps.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <span class="small text-muted"><i class="bi bi-people me-1"></i> 24 Drivers</span>
+                <button class="btn-nexus-primary btn-sm js-event-register-btn" data-event-id="ev4">
+                  <i class="bi bi-ticket-perforated"></i> Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div class="nexus-card js-filter-card reveal-up" data-category="tournament">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 16/9;">
+              <img src="assets/images/8.jpg" alt="Esports Championship Stage">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-danger">Esports</span>
+                <span class="small text-muted"><i class="bi bi-clock me-1"></i> Dec 05, 2026</span>
+              </div>
+              <h3 class="h5 mb-2">Pro Esports Arena Cup</h3>
+              <p class="small text-muted mb-3">Regional esports cup with live audience stream and pro casting talent.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <span class="small text-muted"><i class="bi bi-people me-1"></i> 16 Teams</span>
+                <button class="btn-nexus-primary btn-sm js-event-register-btn" data-event-id="ev5">
+                  <i class="bi bi-ticket-perforated"></i> Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 6 -->
+          <div class="nexus-card js-filter-card reveal-up" data-category="contest">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 16/9;">
+              <img src="assets/images/27.jpg" alt="Battlestation Desk Build Off">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-info">Hardware Showcase</span>
+                <span class="small text-muted"><i class="bi bi-clock me-1"></i> Dec 18, 2026</span>
+              </div>
+              <h3 class="h5 mb-2">Desk & Cable Management Off</h3>
+              <p class="small text-muted mb-3">Cleanest desk builds and custom cable routing showcase with sponsor prizes.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <span class="small text-muted"><i class="bi bi-people me-1"></i> 90 Entered</span>
+                <button class="btn-nexus-primary btn-sm js-event-register-btn" data-event-id="ev6">
+                  <i class="bi bi-ticket-perforated"></i> Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="nexus-footer">
+    <div class="nexus-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo mb-3 d-inline-flex">
+            <div class="brand-icon"><i class="bi bi-controller"></i></div>
+            <span>NEXUS LOUNGE</span>
+          </a>
+          <p class="text-muted small mb-4" style="max-width: 320px;">
+            Play Together. Talk Freely. Create More. The premier modern platform for gaming communities, high-bitrate voice lounges, and content creators.
+          </p>
+          <div class="footer-social-links d-flex align-items-center gap-2 mt-3">
+            <a href="https://discord.com" target="_blank" class="footer-social-icon" aria-label="Discord"><i class="bi bi-discord"></i></a>
+            <a href="https://twitch.tv" target="_blank" class="footer-social-icon" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+            <a href="https://youtube.com" target="_blank" class="footer-social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank" class="footer-social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://instagram.com" target="_blank" class="footer-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://reddit.com" target="_blank" class="footer-social-icon" aria-label="Reddit"><i class="bi bi-reddit"></i></a>
+            <a href="https://store.steampowered.com" target="_blank" class="footer-social-icon" aria-label="Steam"><i class="bi bi-steam"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <ul class="footer-links">
+            <li><a href="community.html">Community Hubs</a></li>
+            <li><a href="voice-lounge.html">Voice Lounge</a></li>
+            <li><a href="creators.html">Creators</a></li>
+            <li><a href="gallery.html">Media Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="events.html">Tournaments & Events</a></li>
+            <li><a href="gear-studio.html">Gear & Studio Guide</a></li>
+            <li><a href="about.html">About NEXUS</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Account</h5>
+          <ul class="footer-links">
+            <li><a href="dashboard.html">User Dashboard</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 NEXUS LOUNGE Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</body>
+</html>

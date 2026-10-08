@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS LOUNGE — Gaming Community, Voice Lounge & Creator Hub</title>
+  <meta name="description" content="Play Together. Talk Freely. Create More. NEXUS LOUNGE is the premier modern gaming community platform for voice chat, esports, gaming photography, and creator studios.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CDN & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Core Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+    <header class="nexus-navbar">
+    <div class="nexus-container navbar-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">
+          <i class="bi bi-controller"></i>
+        </div>
+        <span>NEXUS LOUNGE</span>
+      </a>
+
+      <ul class="nav-menu-desktop">
+        <li><a href="index.html" class="nav-link-item active">Home</a></li>
+
+        <li class="nav-item-dropdown">
+          <a href="community.html" class="nav-link-item">
+            Explore Hubs <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="nexus-dropdown-menu">
+            <a href="community.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-people-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Community Hubs</div>
+                <div class="dropdown-item-sub">Connect with squads & forums</div>
+              </div>
+            </a>
+            <a href="voice-lounge.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-mic-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Voice Lounge</div>
+                <div class="dropdown-item-sub">Live low-latency channels</div>
+              </div>
+            </a>
+            <a href="creators.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-camera-reels-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Creators & Media</div>
+                <div class="dropdown-item-sub">Streamers, clips & photography</div>
+              </div>
+            </a>
+            <a href="events.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-trophy-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Events & Esports</div>
+                <div class="dropdown-item-sub">Live tournaments & showcases</div>
+              </div>
+            </a>
+            <a href="gear-studio.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-cpu-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Gear & Studio</div>
+                <div class="dropdown-item-sub">Battlestation setups & hardware</div>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li><a href="gallery.html" class="nav-link-item">Gallery</a></li>
+
+        <li class="nav-item-dropdown">
+          <a href="about.html" class="nav-link-item">
+            About & Support <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+          </a>
+          <div class="nexus-dropdown-menu">
+            <a href="about.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-info-circle-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">About NEXUS</div>
+                <div class="dropdown-item-sub">Our mission & gaming platform</div>
+              </div>
+            </a>
+            <a href="contact.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-envelope-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Contact Support</div>
+                <div class="dropdown-item-sub">Help desk & member inquiries</div>
+              </div>
+            </a>
+            <a href="dashboard.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-speedometer2"></i></div>
+              <div>
+                <div class="dropdown-item-title">Member Dashboard</div>
+                <div class="dropdown-item-sub">Squad stats & activity hub</div>
+              </div>
+            </a>
+            <a href="admin.html" class="dropdown-item-link">
+              <div class="dropdown-item-icon"><i class="bi bi-shield-lock-fill"></i></div>
+              <div>
+                <div class="dropdown-item-title">Admin Console</div>
+                <div class="dropdown-item-sub">System & moderation panel</div>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-actions-desktop">
+        <a href="dashboard.html" class="btn-nexus-primary btn-sm">
+          <i class="bi bi-speedometer2 me-1"></i> Dashboard
+        </a>
+      </div>
+
+      <button id="mobileToggleBtn" class="mobile-toggle-btn" aria-label="Open navigation menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+
+        <div id="mobileNavOverlay" class="mobile-nav-overlay">
+      <div class="mobile-menu-container">
+        
+        <!-- ITEM 1: HOME -->
+        <a href="index.html" class="mobile-nav-item-link">
+          <i class="bi bi-house-door-fill me-2 text-primary"></i> Home
+        </a>
+
+        <!-- ITEM 2: EXPLORE HUBS (ACCORDION DROPDOWN) -->
+        <div class="mobile-dropdown-group">
+          <button class="mobile-dropdown-toggle" type="button">
+            <span><i class="bi bi-compass-fill me-2 text-purple"></i> Explore Hubs</span>
+            <i class="bi bi-chevron-down toggle-arrow"></i>
+          </button>
+          <div class="mobile-dropdown-content">
+            <a href="community.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-people-fill text-primary"></i></div>
+              <div>
+                <div class="sublink-title">Community Hubs</div>
+                <div class="sublink-desc">Connect with squads & forums</div>
+              </div>
+            </a>
+            <a href="voice-lounge.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-mic-fill text-purple"></i></div>
+              <div>
+                <div class="sublink-title">Voice Lounge</div>
+                <div class="sublink-desc">Live low-latency channels</div>
+              </div>
+            </a>
+            <a href="creators.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-camera-reels-fill text-warning"></i></div>
+              <div>
+                <div class="sublink-title">Creators & Media</div>
+                <div class="sublink-desc">Streamers, clips & photography</div>
+              </div>
+            </a>
+            <a href="events.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-trophy-fill text-success"></i></div>
+              <div>
+                <div class="sublink-title">Events & Esports</div>
+                <div class="sublink-desc">Live tournaments & showcases</div>
+              </div>
+            </a>
+            <a href="gear-studio.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-cpu-fill text-info"></i></div>
+              <div>
+                <div class="sublink-title">Gear & Studio</div>
+                <div class="sublink-desc">Battlestation setups & hardware</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- ITEM 3: GALLERY -->
+        <a href="gallery.html" class="mobile-nav-item-link">
+          <i class="bi bi-images me-2 text-info"></i> Gallery
+        </a>
+
+        <!-- ITEM 4: ABOUT & SUPPORT (ACCORDION DROPDOWN) -->
+        <div class="mobile-dropdown-group">
+          <button class="mobile-dropdown-toggle" type="button">
+            <span><i class="bi bi-info-circle-fill me-2 text-warning"></i> About & Support</span>
+            <i class="bi bi-chevron-down toggle-arrow"></i>
+          </button>
+          <div class="mobile-dropdown-content">
+            <a href="about.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-info-circle-fill text-primary"></i></div>
+              <div>
+                <div class="sublink-title">About NEXUS</div>
+                <div class="sublink-desc">Our mission & gaming platform</div>
+              </div>
+            </a>
+            <a href="contact.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-envelope-fill text-success"></i></div>
+              <div>
+                <div class="sublink-title">Contact Support</div>
+                <div class="sublink-desc">Help desk & member inquiries</div>
+              </div>
+            </a>
+            <a href="dashboard.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-speedometer2 text-info"></i></div>
+              <div>
+                <div class="sublink-title">Member Dashboard</div>
+                <div class="sublink-desc">Squad stats & activity hub</div>
+              </div>
+            </a>
+            <a href="admin.html" class="mobile-sublink-card">
+              <div class="sublink-icon"><i class="bi bi-shield-lock-fill text-danger"></i></div>
+              <div>
+                <div class="sublink-title">Admin Console</div>
+                <div class="sublink-desc">System & moderation panel</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-nav-actions">
+        <a href="dashboard.html" class="btn-nexus-primary w-100 text-center py-3 fs-6">
+          <i class="bi bi-speedometer2 me-2"></i> Launch Member Dashboard
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+        <!-- ==================== HERO SECTION (ULTRA PREMIUM) ==================== -->
+        <!-- ==================== HERO SECTION (MASS LEVEL ENHANCED) ==================== -->
+        <!-- ==================== HERO SECTION (CLEAN & ELEGANT) ==================== -->
+    <section class="hero-section">
+      <!-- Interactive Particle Node Matrix Canvas -->
+      <canvas id="heroParticleCanvas" class="hero-particle-canvas"></canvas>
+
+      <!-- Ambient Glow Orbs -->
+      <div class="hero-ambient-glow glow-blue"></div>
+      <div class="hero-ambient-glow glow-purple"></div>
+
+      <div class="nexus-container position-relative" style="z-index: 2;">
+        <div class="hero-grid">
+          <div class="hero-content reveal-up">
+            <div class="section-badge mb-3">
+              <i class="bi bi-lightning-charge-fill me-1 text-accent-glow"></i>
+              <span>GAMING COMMUNITY • VOICE • CREATOR HUB</span>
+            </div>
+            
+            <h1 class="hero-main-title">
+              Your Community. Your Squad.<br>
+              <span id="heroDynamicWord" class="hero-dynamic-word">Your Lounge.</span>
+            </h1>
+
+            <p class="hero-subtext">
+              A place to meet gamers, join high-fidelity voice conversations, discover elite creators, share gaming moments, and build communities around the games you love.
+            </p>
+
+            <!-- Game Hub Quick Mode Switcher Tabs -->
+            <div class="hero-game-tabs mb-4">
+              <button class="game-tab-btn active" data-game="apex" data-img="assets/images/1.jpg" data-name="Apex Squad #4" data-val="12.8K">
+                <i class="bi bi-crosshair me-1"></i> FPS Squads
+              </button>
+              <button class="game-tab-btn" data-game="val" data-img="assets/images/2.jpg" data-name="Valorant Pro Lounge" data-val="18.4K">
+                <i class="bi bi-shield-shaded me-1"></i> Tactical Lounge
+              </button>
+              <button class="game-tab-btn" data-game="setup" data-img="assets/images/3.jpg" data-name="RGB Setup Battle" data-val="9.2K">
+                <i class="bi bi-cpu-fill me-1"></i> Creator Studio
+              </button>
+              <button class="game-tab-btn" data-game="tourney" data-img="assets/images/4.jpg" data-name="Esports Arena Finals" data-val="24.1K">
+                <i class="bi bi-trophy-fill me-1"></i> Tournaments
+              </button>
+            </div>
+
+            <div class="hero-actions">
+              <a href="community.html" class="btn-nexus-primary btn-lg shadow-pulse">
+                <i class="bi bi-compass-fill me-1"></i> Explore Community
+              </a>
+              <a href="voice-lounge.html" class="btn-nexus-secondary btn-lg">
+                <i class="bi bi-mic-fill me-1"></i> Enter Voice Lounge
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Media Card with Cleaned Floating Badges -->
+          <div class="hero-image-wrap reveal-up" id="heroTiltCard">
+            <div class="hero-img-inner">
+              <img id="heroMainImage" src="assets/images/1.jpg" alt="NEXUS LOUNGE Gaming Setup Battlestation">
+              <div class="hero-card-overlay"></div>
+              <div class="hero-glass-sheen"></div>
+            </div>
+            
+            <!-- Clean Badge 1: Active Members -->
+            <div class="hero-floating-stat stat-clean-topleft">
+              <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+              <div>
+                <div id="heroStatMembers" class="stat-val">12.8K</div>
+                <div class="stat-lbl">Active Members</div>
+              </div>
+            </div>
+
+            <!-- Clean Badge 2: Live Voice Channel -->
+            <div class="hero-floating-stat stat-clean-bottomright" id="voiceEqPreviewBtn" title="Click to listen live preview!">
+              <div class="eq-bars me-2">
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+              </div>
+              <div>
+                <div class="stat-val d-flex align-items-center gap-2">
+                  <span class="live-dot-pulse"></span>
+                  <span id="heroRoomTitle">Apex Squad #4</span>
+                </div>
+                <div class="stat-lbl d-flex align-items-center gap-1">
+                  <span>Voice Channel Live</span>
+                  <i class="bi bi-volume-up-fill text-accent ms-1"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LIVE COMMUNITY ESPORTS TICKER TAPE ==================== -->
+    <div class="nexus-live-ticker">
+      <div class="ticker-badge">
+        <span class="live-dot-pulse"></span>
+        <span>LIVE UPDATES</span>
+      </div>
+      <div class="ticker-track-wrap">
+        <div class="ticker-track">
+          <span>🔥 <strong>TOURNEY:</strong> Apex Legends Squad Championship ($5,000 Prize Pool) — 64 Squads Registered</span>
+          <span>🔴 <strong>LIVE STREAM:</strong> @VortexGamer is broadcasting 4K Valorant Ranked Competitive</span>
+          <span>🎙️ <strong>VOICE LOUNGE:</strong> 1,420 Gamers active across 42 channels right now</span>
+          <span>📸 <strong>CREATOR HUB:</strong> 48 new gaming setup photos added to Media Gallery today</span>
+          <span>🏆 <strong>ESPORTS:</strong> Pro GT Sim Racing Finals start tonight at 18:00 EST</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== LIVE COMMUNITY STRIP ==================== -->
+    <section class="live-strip">
+      <div class="nexus-container">
+        <div class="live-strip-grid">
+          <div class="strip-item">
+            <div class="strip-icon"><i class="bi bi-people"></i></div>
+            <div>
+              <div class="strip-number" data-target="12840">0</div>
+              <div class="strip-label">Live Members</div>
+            </div>
+          </div>
+          <div class="strip-item">
+            <div class="strip-icon"><i class="bi bi-headset"></i></div>
+            <div>
+              <div class="strip-number" data-target="42">0</div>
+              <div class="strip-label">Active Voice Rooms</div>
+            </div>
+          </div>
+          <div class="strip-item">
+            <div class="strip-icon"><i class="bi bi-trophy"></i></div>
+            <div>
+              <div class="strip-number" data-target="18">0</div>
+              <div class="strip-label">Live Events</div>
+            </div>
+          </div>
+          <div class="strip-item">
+            <div class="strip-icon"><i class="bi bi-camera-reels"></i></div>
+            <div>
+              <div class="strip-number" data-target="186">0</div>
+              <div class="strip-label">Creators Online</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COMMUNITY SECTION ==================== -->
+    <section class="section-spacing">
+      <div class="nexus-container">
+        <div class="section-title-wrap text-center mx-auto" style="max-width: 600px;">
+          <div class="section-badge">
+            <i class="bi bi-grid-fill"></i>
+            <span>COMMUNITY HUBS</span>
+          </div>
+          <h2 class="section-heading">Find Your People</h2>
+          <p class="section-subtext">Join dedicated hubs built around your favorite genres and squad dynamics.</p>
+        </div>
+
+        <div class="nexus-grid-4">
+          <!-- Card 1 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 4/3;">
+              <img src="assets/images/2.jpg" alt="FPS Community Tactical Hub">
+            </div>
+            <div class="nexus-card-body">
+              <h3 class="h5 mb-2">FPS & Tactical Hub</h3>
+              <p class="text-muted small mb-3">Competitive tactical shooters, ranked squads, and strategy breakdowns.</p>
+              <div class="d-flex align-items-center gap-2 mb-3 mt-auto">
+                <span class="status-dot live"></span>
+                <span class="small text-muted fw-semibold">4.2K Members • 342 Online</span>
+              </div>
+            </div>
+            <div class="nexus-card-footer">
+              <a href="community.html" class="btn-nexus-outline btn-sm w-100 justify-content-center">
+                <i class="bi bi-plus-lg"></i> Join Community
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 4/3;">
+              <img src="assets/images/3.jpg" alt="RPG & MMO Realm">
+            </div>
+            <div class="nexus-card-body">
+              <h3 class="h5 mb-2">RPG & Fantasy Realm</h3>
+              <p class="text-muted small mb-3">Immersive worlds, raid teams, build guides, and lore discussions.</p>
+              <div class="d-flex align-items-center gap-2 mb-3 mt-auto">
+                <span class="status-dot live"></span>
+                <span class="small text-muted fw-semibold">3.8K Members • 289 Online</span>
+              </div>
+            </div>
+            <div class="nexus-card-footer">
+              <a href="community.html" class="btn-nexus-outline btn-sm w-100 justify-content-center">
+                <i class="bi bi-plus-lg"></i> Join Community
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 4/3;">
+              <img src="assets/images/4.jpg" alt="Racing Sim Lounge">
+            </div>
+            <div class="nexus-card-body">
+              <h3 class="h5 mb-2">Racing & Sim Lounge</h3>
+              <p class="text-muted small mb-3">Sim racing leagues, wheel setups, telemetries, and lap challenges.</p>
+              <div class="d-flex align-items-center gap-2 mb-3 mt-auto">
+                <span class="status-dot live"></span>
+                <span class="small text-muted fw-semibold">2.4K Members • 190 Online</span>
+              </div>
+            </div>
+            <div class="nexus-card-footer">
+              <a href="community.html" class="btn-nexus-outline btn-sm w-100 justify-content-center">
+                <i class="bi bi-plus-lg"></i> Join Community
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 4/3;">
+              <img src="assets/images/5.jpg" alt="Casual & Co-op Lounge">
+            </div>
+            <div class="nexus-card-body">
+              <h3 class="h5 mb-2">Casual & Co-op Corner</h3>
+              <p class="text-muted small mb-3">Chill weekend gaming, indie titles, party games, and friendly lounges.</p>
+              <div class="d-flex align-items-center gap-2 mb-3 mt-auto">
+                <span class="status-dot live"></span>
+                <span class="small text-muted fw-semibold">5.1K Members • 410 Online</span>
+              </div>
+            </div>
+            <div class="nexus-card-footer">
+              <a href="community.html" class="btn-nexus-outline btn-sm w-100 justify-content-center">
+                <i class="bi bi-plus-lg"></i> Join Community
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VOICE LOUNGE SECTION ==================== -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="nexus-container">
+        <div class="voice-preview-split">
+          <div class="reveal-up">
+            <div class="section-badge">
+              <i class="bi bi-mic-fill"></i>
+              <span>VOICE LOUNGE</span>
+            </div>
+            <h2 class="section-heading mb-3">Drop Into the Conversation</h2>
+            <p class="section-subtext mb-4">
+              Join topic-based voice lounges, gaming squads, creator rooms and casual community conversations.
+            </p>
+            <div class="hero-image-wrap mb-4" style="aspect-ratio: 16/10;">
+              <img src="assets/images/6.jpg" alt="Voice Lounge Studio Gear">
+            </div>
+          </div>
+
+          <div class="reveal-up">
+            <div class="voice-room-list">
+              <!-- Room 1 -->
+              <div class="voice-room-card-inline">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="status-pill live"><i class="bi bi-broadcast"></i> LIVE</span>
+                    <h3 class="room-meta-title mb-0">Late Night Squad</h3>
+                  </div>
+                  <div class="room-meta-sub">
+                    <span><i class="bi bi-people"></i> 24 members</span>
+                    <span><i class="bi bi-dot"></i> 18 listening</span>
+                    <div class="audio-waveform ms-2">
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-nexus-primary btn-sm js-join-room-btn" data-room-name="Late Night Squad">
+                  <i class="bi bi-headset"></i> Join Room
+                </button>
+              </div>
+
+              <!-- Room 2 -->
+              <div class="voice-room-card-inline">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="status-pill live"><i class="bi bi-broadcast"></i> LIVE</span>
+                    <h3 class="room-meta-title mb-0">Ranked Grind Arena</h3>
+                  </div>
+                  <div class="room-meta-sub">
+                    <span><i class="bi bi-people"></i> 12 members</span>
+                    <span><i class="bi bi-dot"></i> 9 active</span>
+                    <div class="audio-waveform ms-2">
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-nexus-primary btn-sm js-join-room-btn" data-room-name="Ranked Grind Arena">
+                  <i class="bi bi-headset"></i> Join Room
+                </button>
+              </div>
+
+              <!-- Room 3 -->
+              <div class="voice-room-card-inline">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="status-pill live"><i class="bi bi-broadcast"></i> LIVE</span>
+                    <h3 class="room-meta-title mb-0">Creator Studio Talk</h3>
+                  </div>
+                  <div class="room-meta-sub">
+                    <span><i class="bi bi-people"></i> 36 members</span>
+                    <span><i class="bi bi-dot"></i> 27 listening</span>
+                    <div class="audio-waveform ms-2">
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                      <div class="waveform-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn-nexus-primary btn-sm js-join-room-btn" data-room-name="Creator Studio Talk">
+                  <i class="bi bi-headset"></i> Join Room
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-4 text-end">
+              <a href="voice-lounge.html" class="btn-nexus-secondary">
+                View All Voice Lounges <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CREATOR SECTION ==================== -->
+    <section class="section-spacing">
+      <div class="nexus-container">
+        <div class="section-title-wrap d-flex align-items-end justify-content-between flex-wrap gap-3">
+          <div>
+            <div class="section-badge">
+              <i class="bi bi-star-fill"></i>
+              <span>FEATURED CREATORS</span>
+            </div>
+            <h2 class="section-heading mb-0">Meet the Creators</h2>
+          </div>
+          <a href="creators.html" class="btn-nexus-outline">
+            Browse All Creators <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="nexus-grid-4">
+          <!-- Creator 1 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 1/1;">
+              <img src="assets/images/10.jpg" alt="Alex Mercer">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                  <h3 class="h6 mb-0">Alex Mercer</h3>
+                  <span class="small text-muted">@valkyrie_fps</span>
+                </div>
+                <span class="status-pill live">LIVE</span>
+              </div>
+              <p class="small text-muted mb-3">Tactical FPS streamer & competitive esports coach.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto pt-2 border-top border-secondary">
+                <span class="small fw-semibold"><i class="bi bi-heart-fill text-danger me-1"></i> 142K Followers</span>
+                <button class="btn-nexus-outline btn-sm js-follow-btn" data-creator-id="c1">
+                  <i class="bi bi-person-plus-fill"></i> Follow
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Creator 2 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 1/1;">
+              <img src="assets/images/37.jpg" alt="Elena Rostova">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                  <h3 class="h6 mb-0">Elena Rostova</h3>
+                  <span class="small text-muted">@pixelpro_photo</span>
+                </div>
+                <span class="status-pill" style="background: rgba(255,255,255,0.08); color: var(--text-muted);">OFFLINE</span>
+              </div>
+              <p class="small text-muted mb-3">Gaming setup photographer & cine colorist.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto pt-2 border-top border-secondary">
+                <span class="small fw-semibold"><i class="bi bi-heart-fill text-danger me-1"></i> 98K Followers</span>
+                <button class="btn-nexus-outline btn-sm js-follow-btn" data-creator-id="c2">
+                  <i class="bi bi-person-plus-fill"></i> Follow
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Creator 3 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 1/1;">
+              <img src="assets/images/44.jpg" alt="Marcus Vance">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                  <h3 class="h6 mb-0">Marcus Vance</h3>
+                  <span class="small text-muted">@cybervolt_caster</span>
+                </div>
+                <span class="status-pill live">LIVE</span>
+              </div>
+              <p class="small text-muted mb-3">Esports caster & tournament breakdown host.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto pt-2 border-top border-secondary">
+                <span class="small fw-semibold"><i class="bi bi-heart-fill text-danger me-1"></i> 210K Followers</span>
+                <button class="btn-nexus-outline btn-sm js-follow-btn" data-creator-id="c3">
+                  <i class="bi bi-person-plus-fill"></i> Follow
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Creator 4 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 1/1;">
+              <img src="assets/images/50.jpg" alt="Sarah Chen">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                  <h3 class="h6 mb-0">Sarah Chen</h3>
+                  <span class="small text-muted">@aura_video</span>
+                </div>
+                <span class="status-pill" style="background: rgba(255,255,255,0.08); color: var(--text-muted);">OFFLINE</span>
+              </div>
+              <p class="small text-muted mb-3">Gaming montage producer & video editor.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto pt-2 border-top border-secondary">
+                <span class="small fw-semibold"><i class="bi bi-heart-fill text-danger me-1"></i> 165K Followers</span>
+                <button class="btn-nexus-outline btn-sm js-follow-btn" data-creator-id="c4">
+                  <i class="bi bi-person-plus-fill"></i> Follow
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED MEDIA SECTION ==================== -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="nexus-container">
+        <div class="section-title-wrap text-center mx-auto" style="max-width: 650px;">
+          <div class="section-badge">
+            <i class="bi bi-image-fill"></i>
+            <span>COMMUNITY MEDIA</span>
+          </div>
+          <h2 class="section-heading">From the Community</h2>
+          <p class="section-subtext">Gaming photography, gameplay moments, setup photography, creator studio images.</p>
+        </div>
+
+        <div class="nexus-grid-4">
+          <!-- Media 1 -->
+          <div class="nexus-card reveal-up js-lightbox-trigger" data-src="assets/images/17.jpg" data-title="Neon RGB Battlestation" data-creator="@pixelpro_photo">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 4/3;">
+              <img src="assets/images/17.jpg" alt="Neon RGB Battlestation">
+            </div>
+            <div class="nexus-card-body p-3">
+              <span class="badge bg-primary mb-1" style="width: fit-content;">Gaming Setup</span>
+              <h4 class="h6 mb-0">Neon RGB Battlestation</h4>
+            </div>
+          </div>
+
+          <!-- Media 2 -->
+          <div class="nexus-card reveal-up js-lightbox-trigger" data-src="assets/images/18.jpg" data-title="Broadcast Mic Setup" data-creator="@valkyrie_fps">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 4/3;">
+              <img src="assets/images/18.jpg" alt="Broadcast Mic Setup">
+            </div>
+            <div class="nexus-card-body p-3">
+              <span class="badge bg-purple mb-1" style="background-color: var(--accent-secondary); width: fit-content;">Audio Rig</span>
+              <h4 class="h6 mb-0">Pro Broadcast Interface</h4>
+            </div>
+          </div>
+
+          <!-- Media 3 -->
+          <div class="nexus-card reveal-up js-lightbox-trigger" data-src="assets/images/19.jpg" data-title="4K Cine Camera Rig" data-creator="@aura_video">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 4/3;">
+              <img src="assets/images/19.jpg" alt="4K Cine Camera Rig">
+            </div>
+            <div class="nexus-card-body p-3">
+              <span class="badge bg-info mb-1" style="width: fit-content;">Studio Gear</span>
+              <h4 class="h6 mb-0">4K Cine Streaming Camera</h4>
+            </div>
+          </div>
+
+          <!-- Media 4 -->
+          <div class="nexus-card reveal-up js-lightbox-trigger" data-src="assets/images/20.jpg" data-title="High Refresh Dual Display" data-creator="@cybervolt_caster">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 4/3;">
+              <img src="assets/images/20.jpg" alt="High Refresh Dual Display">
+            </div>
+            <div class="nexus-card-body p-3">
+              <span class="badge bg-success mb-1" style="width: fit-content;">Hardware</span>
+              <h4 class="h6 mb-0">240Hz Dual Esports Monitors</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="gallery.html" class="btn-nexus-primary">
+            <i class="bi bi-images"></i> Explore Full Media Gallery
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== UPCOMING EVENTS SECTION ==================== -->
+    <section class="section-spacing">
+      <div class="nexus-container">
+        <div class="section-title-wrap d-flex align-items-end justify-content-between flex-wrap gap-3">
+          <div>
+            <div class="section-badge">
+              <i class="bi bi-calendar-event-fill"></i>
+              <span>TOURNAMENTS & EVENTS</span>
+            </div>
+            <h2 class="section-heading mb-0">Upcoming Gaming Events</h2>
+          </div>
+          <a href="events.html" class="btn-nexus-outline">
+            View All Events <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="nexus-grid-3">
+          <!-- Event 1 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 16/9;">
+              <img src="assets/images/23.jpg" alt="Nexus Autumn Squad Showdown">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-primary">Tournament</span>
+                <span class="small text-muted"><i class="bi bi-clock me-1"></i> Oct 24, 2026</span>
+              </div>
+              <h3 class="h5 mb-2">Nexus Squad Showdown</h3>
+              <p class="small text-muted mb-3">5v5 Tactical FPS tournament with $5,000 prize pool and live casters.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <span class="small text-muted"><i class="bi bi-person-check me-1"></i> 64 Squads Joined</span>
+                <button class="btn-nexus-primary btn-sm js-event-register-btn" data-event-id="ev1">
+                  <i class="bi bi-ticket-perforated"></i> Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 16/9;">
+              <img src="assets/images/24.jpg" alt="Creator Setup Photography Contest">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-purple" style="background-color: var(--accent-secondary);">Community Contest</span>
+                <span class="small text-muted"><i class="bi bi-clock me-1"></i> Nov 02, 2026</span>
+              </div>
+              <h3 class="h5 mb-2">Setup Photography Battle</h3>
+              <p class="small text-muted mb-3">Submit your gaming setup photography for community votes and gear prizes.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <span class="small text-muted"><i class="bi bi-person-check me-1"></i> 128 Submissions</span>
+                <button class="btn-nexus-primary btn-sm js-event-register-btn" data-event-id="ev2">
+                  <i class="bi bi-ticket-perforated"></i> Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="nexus-card reveal-up">
+            <div class="nexus-card-img-wrap" style="aspect-ratio: 16/9;">
+              <img src="assets/images/25.jpg" alt="24H Charity Stream Marathon">
+            </div>
+            <div class="nexus-card-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-success">Stream Marathon</span>
+                <span class="small text-muted"><i class="bi bi-clock me-1"></i> Nov 15, 2026</span>
+              </div>
+              <h3 class="h5 mb-2">24H Creator Charity Stream</h3>
+              <p class="small text-muted mb-3">Joint community stream featuring top creators, giveaway drops, and charity goals.</p>
+              <div class="d-flex align-items-center justify-content-between mt-auto">
+                <span class="small text-muted"><i class="bi bi-person-check me-1"></i> 32 Creators Live</span>
+                <button class="btn-nexus-primary btn-sm js-event-register-btn" data-event-id="ev3">
+                  <i class="bi bi-ticket-perforated"></i> Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CREATOR STUDIO / GEAR SECTION ==================== -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="nexus-container">
+        <div class="hero-grid">
+          <div class="hero-image-wrap reveal-up" style="aspect-ratio: 4/3;">
+            <img src="assets/images/7.jpg" alt="Creator Studio Setup & Hardware">
+          </div>
+
+          <div class="reveal-up">
+            <div class="section-badge">
+              <i class="bi bi-gear-fill"></i>
+              <span>CREATOR STUDIO</span>
+            </div>
+            <h2 class="section-heading mb-3">Build Your Creator Space</h2>
+            <p class="section-subtext mb-4">
+              Discover setups, cine cameras, broadcast mics, audiophile headsets, key lighting, and capture rigs tested and recommended by NEXUS creators.
+            </p>
+            
+            <div class="row g-3 mb-4">
+              <div class="col-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-camera-video-fill text-primary"></i>
+                  <span class="fw-semibold">Cine Cameras</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-mic-fill text-primary"></i>
+                  <span class="fw-semibold">Studio Microphones</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-headset text-primary"></i>
+                  <span class="fw-semibold">Esports Headsets</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-lightbulb-fill text-primary"></i>
+                  <span class="fw-semibold">Key & RGB Lights</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="gear-studio.html" class="btn-nexus-primary">
+              <i class="bi bi-cpu-fill"></i> Explore Gear & Studio Guide
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FINAL CTA SECTION ==================== -->
+    <section class="section-spacing">
+      <div class="nexus-container">
+        <div class="final-cta-card reveal-up">
+          <h2>Your Next Squad Is Already Here.</h2>
+          <p>Join over 12,000 active gamers, voice lounge regulars, and content creators today.</p>
+          <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap">
+            <a href="register.html" class="btn-nexus-primary">
+              <i class="bi bi-person-plus-fill"></i> Join Community Now
+            </a>
+            <a href="voice-lounge.html" class="btn-nexus-secondary">
+              <i class="bi bi-mic-fill"></i> Explore Voice Rooms
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="nexus-footer">
+    <div class="nexus-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo mb-3 d-inline-flex">
+            <div class="brand-icon"><i class="bi bi-controller"></i></div>
+            <span>NEXUS LOUNGE</span>
+          </a>
+          <p class="text-muted small mb-4" style="max-width: 320px;">
+            Play Together. Talk Freely. Create More. The premier modern platform for gaming communities, high-bitrate voice lounges, and content creators.
+          </p>
+          <div class="footer-social-links d-flex align-items-center gap-2 mt-3">
+            <a href="https://discord.com" target="_blank" class="footer-social-icon" aria-label="Discord"><i class="bi bi-discord"></i></a>
+            <a href="https://twitch.tv" target="_blank" class="footer-social-icon" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+            <a href="https://youtube.com" target="_blank" class="footer-social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank" class="footer-social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://instagram.com" target="_blank" class="footer-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://reddit.com" target="_blank" class="footer-social-icon" aria-label="Reddit"><i class="bi bi-reddit"></i></a>
+            <a href="https://store.steampowered.com" target="_blank" class="footer-social-icon" aria-label="Steam"><i class="bi bi-steam"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <ul class="footer-links">
+            <li><a href="community.html">Community Hubs</a></li>
+            <li><a href="voice-lounge.html">Voice Lounge</a></li>
+            <li><a href="creators.html">Creators</a></li>
+            <li><a href="gallery.html">Media Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="events.html">Tournaments & Events</a></li>
+            <li><a href="gear-studio.html">Gear & Studio Guide</a></li>
+            <li><a href="about.html">About NEXUS</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Account</h5>
+          <ul class="footer-links">
+            <li><a href="dashboard.html">User Dashboard</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 NEXUS LOUNGE Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</body>
+</html>

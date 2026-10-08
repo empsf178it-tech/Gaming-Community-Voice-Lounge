@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — NEXUS LOUNGE</title>
+  <meta name="description" content="Personal user dashboard for NEXUS LOUNGE members. Manage joined communities, voice lounge channels, registered tournaments, and followed creators.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CDN & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Core Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body class="portal-body">
+
+  <!-- NAVBAR -->
+  <!-- ==================== DEDICATED MEMBER DASHBOARD HEADER ==================== -->
+  <header class="nexus-navbar dashboard-navbar">
+    <div class="container-fluid px-3 px-md-4 d-flex align-items-center justify-content-between py-2" style="min-height: 70px;">
+      <!-- Brand Logo Moved Far Left -->
+      <a href="index.html" class="brand-logo me-auto">
+        <div class="brand-icon" style="background: linear-gradient(135deg, #5B8CFF, #9B6CFF);">
+          <i class="bi bi-speedometer2"></i>
+        </div>
+        <span class="d-flex align-items-center gap-2">
+          <span style="font-weight: 800; letter-spacing: -0.02em;">NEXUS LOUNGE</span>
+          <span class="badge text-white text-uppercase d-none d-sm-inline-block" style="font-size: 0.68rem; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 4px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));">MEMBER DASHBOARD</span>
+        </span>
+      </a>
+
+      <!-- Right Side Actions -->
+      <div class="d-flex align-items-center gap-3">
+        <!-- Desktop Only Badge & Exit Button -->
+        <div class="d-none d-lg-flex align-items-center gap-2 px-3 py-1 rounded-pill" style="background: var(--bg-card); border: 1px solid var(--border-subtle);">
+          <span class="live-dot-pulse" style="background: var(--status-live);"></span>
+          <span class="small fw-semibold text-muted">Pro Member</span>
+        </div>
+
+        <a href="index.html" class="btn-nexus-secondary btn-sm d-none d-lg-flex align-items-center gap-2">
+          <i class="bi bi-box-arrow-left"></i>
+          <span>Exit to Main Site</span>
+        </a>
+
+        <!-- Mobile & Tablet Hamburger Button -->
+        <button id="mobileToggleBtn" class="mobile-toggle-btn d-lg-none ms-2" aria-label="Open portal navigation menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile & Tablet Navigation Overlay -->
+    <div id="mobileNavOverlay" class="mobile-nav-overlay">
+      <div class="mobile-menu-container">
+        <div class="sidebar-section-title text-accent mb-2">DASHBOARD WORKSPACE</div>
+        <div class="mobile-nav-item-link dashboard-nav-item active" data-tab="overview">
+          <i class="bi bi-speedometer2 me-2 text-primary"></i> Overview
+        </div>
+        <div class="mobile-nav-item-link dashboard-nav-item" data-tab="squads">
+          <i class="bi bi-shield-fill me-2 text-purple"></i> My Squads
+        </div>
+        <div class="mobile-nav-item-link dashboard-nav-item" data-tab="voice">
+          <i class="bi bi-mic-fill me-2 text-success"></i> Voice Channels
+        </div>
+        <div class="mobile-nav-item-link dashboard-nav-item" data-tab="media">
+          <i class="bi bi-images me-2 text-info"></i> Saved Media
+        </div>
+        <div class="mobile-nav-item-link dashboard-nav-item" data-tab="settings">
+          <i class="bi bi-gear-fill me-2 text-warning"></i> Settings
+        </div>
+
+        <div class="sidebar-divider my-3"></div>
+
+        <div class="sidebar-section-title text-accent mb-2">EXPLORE HUBS</div>
+        <a href="index.html" class="mobile-nav-item-link"><i class="bi bi-house-door-fill me-2 text-primary"></i> Home Page</a>
+        <a href="community.html" class="mobile-nav-item-link"><i class="bi bi-people-fill me-2 text-purple"></i> Community Hubs</a>
+        <a href="creators.html" class="mobile-nav-item-link"><i class="bi bi-camera-reels-fill me-2 text-warning"></i> Creators</a>
+        <a href="events.html" class="mobile-nav-item-link"><i class="bi bi-trophy-fill me-2 text-success"></i> Tournaments</a>
+        <a href="gear-studio.html" class="mobile-nav-item-link"><i class="bi bi-cpu-fill me-2 text-info"></i> Gear & Studio</a>
+        <a href="gallery.html" class="mobile-nav-item-link"><i class="bi bi-grid-3x3-gap-fill me-2 text-danger"></i> Media Gallery</a>
+      </div>
+
+      <div class="mobile-nav-actions mt-4">
+        <a href="index.html" class="btn-nexus-secondary w-100 text-center py-3 fs-6 d-flex align-items-center justify-content-center gap-2">
+          <i class="bi bi-box-arrow-left"></i> Exit to Main Site
+        </a>
+      </div>
+    </div>
+  </header>
+
+      <main>
+    <div class="dashboard-layout">
+      <!-- DEDICATED MEMBER DASHBOARD SIDEBAR -->
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-section-title">WORKSPACE</div>
+        <div class="dashboard-nav-item active" data-tab="overview">
+          <i class="bi bi-speedometer2 me-2"></i> Overview
+        </div>
+        <div class="dashboard-nav-item" data-tab="squads">
+          <i class="bi bi-shield-fill me-2"></i> My Squads
+        </div>
+        <div class="dashboard-nav-item" data-tab="voice">
+          <i class="bi bi-mic-fill me-2"></i> Voice Channels
+        </div>
+        <div class="dashboard-nav-item" data-tab="media">
+          <i class="bi bi-images me-2"></i> Saved Media
+        </div>
+        <div class="dashboard-nav-item" data-tab="settings">
+          <i class="bi bi-gear-fill me-2"></i> Settings
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-section-title">EXPLORE HUBS</div>
+        <a href="index.html" class="dashboard-nav-link">
+          <i class="bi bi-house-door-fill me-2"></i> Home Page
+        </a>
+        <a href="community.html" class="dashboard-nav-link">
+          <i class="bi bi-people-fill me-2"></i> Community Hubs
+        </a>
+        <a href="creators.html" class="dashboard-nav-link">
+          <i class="bi bi-camera-reels-fill me-2"></i> Creators
+        </a>
+        <a href="events.html" class="dashboard-nav-link">
+          <i class="bi bi-trophy-fill me-2"></i> Tournaments
+        </a>
+        <a href="gear-studio.html" class="dashboard-nav-link">
+          <i class="bi bi-cpu-fill me-2"></i> Gear & Studio
+        </a>
+        <a href="gallery.html" class="dashboard-nav-link">
+          <i class="bi bi-grid-3x3-gap-fill me-2"></i> Media Gallery
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-section-title">SUPPORT & ACCOUNT</div>
+        <a href="about.html" class="dashboard-nav-link">
+          <i class="bi bi-info-circle-fill me-2"></i> About NEXUS
+        </a>
+        <a href="contact.html" class="dashboard-nav-link">
+          <i class="bi bi-envelope-fill me-2"></i> Contact Support
+        </a>
+        <a href="login.html" class="dashboard-nav-link text-danger">
+          <i class="bi bi-box-arrow-right me-2"></i> Sign Out
+        </a>
+      </aside>
+
+      <!-- DASHBOARD MAIN CONTENT AREA -->
+      <div class="dashboard-content-area">
+        <!-- USER BAR (FULL VISIBILITY FIX) -->
+        <div class="dashboard-user-bar mb-4 p-4 nexus-card">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/images/10.jpg" alt="User Avatar" style="width: 54px; height: 54px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-primary); flex-shrink: 0;">
+              <div>
+                <h1 id="dashUserName" class="h4 mb-1 text-white" style="line-height: 1.3;">Welcome back, Gamer!</h1>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <span class="badge bg-primary">Vanguard Squad Leader</span>
+                  <span class="small text-muted"><i class="bi bi-shield-check text-success me-1"></i> Verified Pro Member</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2 flex-wrap w-100-mobile mt-2 mt-md-0">
+              <button id="editProfileBtn" class="btn-nexus-secondary btn-sm flex-grow-1 text-center justify-content-center">
+                <i class="bi bi-pencil-square me-1"></i> Edit Profile
+              </button>
+              <a href="voice-lounge.html" class="btn-nexus-primary btn-sm flex-grow-1 text-center justify-content-center">
+                <i class="bi bi-mic-fill me-1"></i> Join Voice Room
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 1: OVERVIEW -->
+        <div id="dashTab-overview" class="dashboard-tab-content active">
+          <!-- STAT CARDS -->
+          <div class="dash-stat-grid mb-4">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon"><i class="bi bi-people-fill"></i></div>
+              <div>
+                <div class="fs-3 fw-bold font-heading">4</div>
+                <div class="small text-muted">Joined Hubs</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon"><i class="bi bi-headset"></i></div>
+              <div>
+                <div class="fs-3 fw-bold font-heading">12</div>
+                <div class="small text-muted">Voice Rooms</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon"><i class="bi bi-ticket-perforated-fill"></i></div>
+              <div>
+                <div class="fs-3 fw-bold font-heading">3</div>
+                <div class="small text-muted">Registered Events</div>
+              </div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon"><i class="bi bi-bookmark-heart-fill"></i></div>
+              <div>
+                <div class="fs-3 fw-bold font-heading">28</div>
+                <div class="small text-muted">Saved Setup Clips</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RECENT SQUAD ACTIVITY & QUICK CHANNELS -->
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="nexus-card p-4">
+                <h3 class="h5 mb-3"><i class="bi bi-activity text-primary me-2"></i>Active Squads & Channels</h3>
+                <div class="d-flex flex-column gap-3">
+                  <div class="p-3 rounded d-flex align-items-center justify-content-between flex-wrap gap-3" style="background: var(--bg-secondary); border: 1px solid var(--border-subtle);">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="stat-icon bg-primary-alpha" style="width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-crosshair text-primary fs-5"></i></div>
+                      <div>
+                        <div class="fw-bold">Apex Vanguard Squad</div>
+                        <div class="small text-muted">4/4 Members • Voice Room #02 Live (14ms Ping)</div>
+                      </div>
+                    </div>
+                    <a href="voice-lounge.html" class="btn-nexus-primary btn-sm ms-auto ms-sm-0">Join Voice</a>
+                  </div>
+
+                  <div class="p-3 rounded d-flex align-items-center justify-content-between flex-wrap gap-3" style="background: var(--bg-secondary); border: 1px solid var(--border-subtle);">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="stat-icon bg-purple-alpha" style="width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-shield-shaded text-purple fs-5"></i></div>
+                      <div>
+                        <div class="fw-bold">Valorant Competitive Hub</div>
+                        <div class="small text-muted">128 Members • Ranked Tournament Stage</div>
+                      </div>
+                    </div>
+                    <a href="community.html" class="btn-nexus-secondary btn-sm ms-auto ms-sm-0">View Hub</a>
+                  </div>
+
+                  <div class="p-3 rounded d-flex align-items-center justify-content-between flex-wrap gap-3" style="background: var(--bg-secondary); border: 1px solid var(--border-subtle);">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="stat-icon bg-success-alpha" style="width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-cpu text-success fs-5"></i></div>
+                      <div>
+                        <div class="fw-bold">Setup Photography & Hardware</div>
+                        <div class="small text-muted">Monthly Battlestation Showcase</div>
+                      </div>
+                    </div>
+                    <a href="gear-studio.html" class="btn-nexus-secondary btn-sm ms-auto ms-sm-0">View Guide</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="nexus-card p-4">
+                <h3 class="h5 mb-3"><i class="bi bi-lightning-charge text-warning me-2"></i>Quick Navigation</h3>
+                <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                  <li><a href="voice-lounge.html" class="text-decoration-none text-muted hover-accent d-flex align-items-center"><i class="bi bi-mic me-2 text-primary"></i> Voice Lounge</a></li>
+                  <li><a href="creators.html" class="text-decoration-none text-muted hover-accent d-flex align-items-center"><i class="bi bi-camera-reels me-2 text-purple"></i> Creator Showcase</a></li>
+                  <li><a href="events.html" class="text-decoration-none text-muted hover-accent d-flex align-items-center"><i class="bi bi-trophy me-2 text-warning"></i> Tournament Bracket</a></li>
+                  <li><a href="gallery.html" class="text-decoration-none text-muted hover-accent d-flex align-items-center"><i class="bi bi-images me-2 text-info"></i> Media Uploads</a></li>
+                  <li><a href="contact.html" class="text-decoration-none text-muted hover-accent d-flex align-items-center"><i class="bi bi-question-circle me-2 text-success"></i> Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: MY SQUAD -->
+        <div id="dashTab-squads" class="dashboard-tab-content">
+          <div class="nexus-card p-4">
+            <h3 class="h5 mb-3">My Gaming Squads</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="p-3 rounded border" style="background: var(--bg-secondary);">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <img src="assets/images/11.jpg" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+                    <div>
+                      <div class="fw-bold">Apex Vanguard Squad</div>
+                      <div class="small text-muted">4 Active Members</div>
+                    </div>
+                  </div>
+                  <p class="small text-muted mb-3">Tactical FPS squad competing in weekly community tournaments.</p>
+                  <a href="voice-lounge.html" class="btn-nexus-primary btn-sm w-100 text-center">Open Voice Channel</a>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="p-3 rounded border" style="background: var(--bg-secondary);">
+                  <div class="d-flex align-items-center gap-3 mb-2">
+                    <img src="assets/images/12.jpg" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+                    <div>
+                      <div class="fw-bold">Sim GT Endurance Racing</div>
+                      <div class="small text-muted">8 Active Drivers</div>
+                    </div>
+                  </div>
+                  <p class="small text-muted mb-3">Endurance sim racing squad running GT3 setups on Spa & Nürburgring.</p>
+                  <a href="events.html" class="btn-nexus-secondary btn-sm w-100 text-center">View Race Events</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: VOICE CHANNELS -->
+        <div id="dashTab-voice" class="dashboard-tab-content">
+          <div class="nexus-card p-4">
+            <h3 class="h5 mb-3">Saved Voice Lounge Channels</h3>
+            <div class="d-flex flex-column gap-3">
+              <div class="p-3 rounded d-flex align-items-center justify-content-between" style="background: var(--bg-secondary); border: 1px solid var(--border-subtle);">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="live-dot-pulse"></span>
+                  <div>
+                    <div class="fw-bold">Apex Squad #4</div>
+                    <div class="small text-muted">Low Latency 14ms • Opus 128kbps Audio</div>
+                  </div>
+                </div>
+                <a href="voice-lounge.html" class="btn-nexus-primary btn-sm">Connect Now</a>
+              </div>
+
+              <div class="p-3 rounded d-flex align-items-center justify-content-between" style="background: var(--bg-secondary); border: 1px solid var(--border-subtle);">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="live-dot-pulse"></span>
+                  <div>
+                    <div class="fw-bold">Valorant Ranked Lounge #01</div>
+                    <div class="small text-muted">Competitive Squad • 4/5 Connected</div>
+                  </div>
+                </div>
+                <a href="voice-lounge.html" class="btn-nexus-primary btn-sm">Connect Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: SAVED MEDIA -->
+        <div id="dashTab-media" class="dashboard-tab-content">
+          <div class="nexus-card p-4">
+            <h3 class="h5 mb-3">My Saved Setup Photos & Clips</h3>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="rounded overflow-hidden border">
+                  <img src="assets/images/1.jpg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                  <div class="p-2 small text-muted">Custom RGB Battlestation</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="rounded overflow-hidden border">
+                  <img src="assets/images/2.jpg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                  <div class="p-2 small text-muted">Streamer XLR Audio Desk</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="rounded overflow-hidden border">
+                  <img src="assets/images/3.jpg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                  <div class="p-2 small text-muted">Dual Monitor Setup</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: SETTINGS -->
+        <div id="dashTab-settings" class="dashboard-tab-content">
+          <div class="nexus-card p-4">
+            <h3 class="h5 mb-3">Account Settings</h3>
+            <form id="dashSettingsForm">
+              <div class="mb-3">
+                <label class="form-label small text-muted">Display Name</label>
+                <input type="text" class="form-control bg-dark text-white border-secondary" value="GamerLeader99">
+              </div>
+              <div class="mb-3">
+                <label class="form-label small text-muted">Email Address</label>
+                <input type="email" class="form-control bg-dark text-white border-secondary" value="gamer@nexuslounge.com">
+              </div>
+              <button type="submit" class="btn-nexus-primary btn-sm">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  </body>
+</html>

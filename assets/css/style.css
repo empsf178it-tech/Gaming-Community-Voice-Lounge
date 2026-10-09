@@ -856,22 +856,50 @@ button {
   }
 }
 
+@media (max-width: 991px) {
+  .nexus-card {
+    min-width: 0 !important;
+  }
+  .nexus-card-body {
+    padding: 18px 20px;
+  }
+  .nexus-card-footer {
+    padding: 14px 20px 20px 20px;
+  }
+  .btn-nexus-outline,
+  .btn-nexus-primary,
+  .btn-nexus-secondary {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+    gap: 6px;
+    white-space: normal;
+    text-align: center;
+  }
+  .filter-pill {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+  }
+}
+
 @media (max-width: 991px) and (min-width: 577px) {
   .nexus-grid-4,
   .nexus-grid-3 {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: var(--grid-gap-tablet) !important;
+    width: 100% !important;
   }
   .nexus-grid-4 > *,
   .nexus-grid-3 > * {
-    flex: 0 0 calc(50% - (var(--grid-gap-tablet) / 2)) !important;
-    max-width: calc(50% - (var(--grid-gap-tablet) / 2)) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
   .nexus-grid-2 {
-    grid-template-columns: 1fr;
-    gap: var(--grid-gap-tablet);
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--grid-gap-tablet) !important;
+    width: 100% !important;
   }
 }
 
@@ -879,8 +907,17 @@ button {
   .nexus-grid-4,
   .nexus-grid-3,
   .nexus-grid-2 {
-    grid-template-columns: 1fr;
-    gap: var(--grid-gap-mobile);
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--grid-gap-mobile) !important;
+    width: 100% !important;
+  }
+  .nexus-grid-4 > *,
+  .nexus-grid-3 > *,
+  .nexus-grid-2 > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 }
 
@@ -912,6 +949,7 @@ button {
 .hero-content h1 span {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1885,6 +1923,7 @@ button {
   background: linear-gradient(135deg, #5B8CFF 0%, #9B6CFF 50%, #FF528C 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 4s ease infinite;
   transition: opacity 0.18s ease, transform 0.18s ease;
@@ -2179,7 +2218,6 @@ button {
 /* Live Community Ticker Tape */
 .nexus-live-ticker {
   background: rgba(17, 24, 32, 0.95);
-  border-y: 1px solid var(--border-subtle);
   border-top: 1px solid rgba(91, 140, 255, 0.2);
   border-bottom: 1px solid rgba(91, 140, 255, 0.2);
   padding: 12px 24px;
@@ -2283,6 +2321,7 @@ button {
   background: linear-gradient(120deg, #5B8CFF 0%, #9B6CFF 35%, #FF528C 70%, #35D07F 100%);
   background-size: 300% 300%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textGradientShift 5s ease infinite;
   filter: drop-shadow(0 0 14px rgba(155, 108, 255, 0.45));
